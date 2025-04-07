@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena - Платформа для спортивных турниров</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tornament.css">
+    
+   
+</head>
+<body>
+    <section class="tornament">
+ <!-- Десктопный хедер -->
+ <header class="header-desktop">
+    <div class="header-nav-first">
+        <a href="#" class="header-logo">
+            <img src="./img/Logo.svg" alt="Logo">
+        </a>
+        <a href="#" class="header-nav-link">
+            <img src="./img/schedule.svg" alt="">
+            Расписание турниров
+        </a>
+    </div>
+    
+    <div class="header-nav">
+        <div class="header-nav-links">
+            <a href="#" class="header-nav-link">Обучающие курсы</a>
+            <a href="#" class="header-nav-link">О платформе</a>
+            <a href="#" class="header-nav-link">Блог</a>
+            <a href="#" class="header-nav-link">Вопрос-ответ</a>
+        </div>
+    </div>
+    
+    <div class="header-actions">
+        <a href="#" class="header-organizer-link">Стать организатором</a>
+        <a href="#" class="header-btn header-register-btn">Зарегистрироваться</a>
+    </div>
+</header>
+
+<!-- Мобильный хедер (свернутый) -->
+<header class="header-mobile">
+    <button class="header-menu-toggle" id="headerMenuToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    
+    <a href="#" class="header-logo">
+        <img src="./img/Logo.svg" alt="Logo">
+    </a>
+    
+    <button class="header-login-btn">
+        <img src="./img/login.svg" alt="Logo">
+    </button>
+</header>
+
+<!-- Мобильное меню (развернутое) -->
+<div class="header-mobile-menu" id="headerMobileMenu">
+    <div class="header-mobile-top">
+        <button class="header-menu-toggle" id="headerMenuClose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <a href="#" class="header-logo">
+            <img src="./img/Logo.svg" alt="Logo">
+        </a>
+        
+        <button class="header-login-btn">
+            <img src="./img/login.svg" alt="Logo">
+        </button>
+    </div>
+    
+    <nav class="header-mobile-nav">
+        <a href="#" class="header-mobile-item-first">
+            <svg class="header-icon-calendar header-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                <rect x="3" y="4" width="18" height="18" rx="2" stroke="black" stroke-width="2"/>
+                <path d="M3 10H21" stroke="black" stroke-width="2"/>
+                <path d="M9 4V10" stroke="black" stroke-width="2"/>
+                <path d="M15 4V10" stroke="black" stroke-width="2"/>
+            </svg>
+            РАСПИСАНИЕ ТУРНИРОВ
+        </a>
+        <a href="#" class="header-mobile-item">ОБУЧАЮЩИЕ КУРСЫ</a>
+        <a href="#" class="header-mobile-item">О ПЛАТФОРМЕ</a>
+        <a href="#" class="header-mobile-item">БЛОГ</a>
+        <a href="#" class="header-mobile-item">ВОПРОС-ОТВЕТ</a>
+    </nav>
+    
+    <a href="#" class="header-organizer-link header-mobile-organizer">Стать организатором</a>
+    
+    <a href="#" class="header-btn header-register-btn header-mobile-register">Зарегистрироваться</a>
+    
+    <div class="header-contact">
+        <div class="header-contact-item">
+            <div class="header-contact-label">Телефон</div>
+            <div class="header-contact-value">+7 (000) 000-00-00</div>
+        </div>
+        <div class="header-contact-item">
+            <div class="header-contact-label">Эл. почта</div>
+            <div class="header-contact-value">arena@pro.ru</div>
+        </div>
+        <div class="header-contact-item">
+            <div class="header-contact-label">Юр. адрес</div>
+            <div class="header-contact-value">Пермь, улица ленина</div>
+        </div>
+    </div>
+    
+    <div class="header-bottom-indicator"></div>
+</div>
+
+
+
+<section class="main-container">
+    <div class="main-route">
+        <a href="#">Главная /</a>
+        <a href="#">Расписание турниров /</a>
+        <p>Открытый турнир «Восход» по спортивной борьбе грэпплинг и грэпплинг-ги по правилам UWW</p>
+    </div>
+</section>
+
+
+<div class="tournament-container">
+    <!-- Left side with image and overlay info -->
+    <div class="tournament-image-section">
+        <img src="./img/tournament-image-second.png" alt="Турнир Восход" class="tournament-image">
+    </div>
+
+    <!-- Right side with details -->
+    <div class="tournament-details-section">
+        <h1 class="tournament-header">ОТКРЫТЫЙ ТУРНИР «ВОСХОД» ПО СПОРТИВНОЙ БОРЬБЕ ГРЭППЛИНГ И ГРЭППЛИНГ-ГИ ПО ПРАВИЛАМ UWW</h1>
+        <div class="tournament-image-section-mobile">
+            <img src="./img/tournament-image-second.png" alt="Турнир Восход" class="tournament-image">
+        </div>
+        <div class="tournament-details">
+            <div class="tournament-details-item">
+                <div class="tournament-details-content">
+                    <div class="tournament-details-icon"><img src="./img/location.svg" alt=""></div>
+                    <div class="tournament-details-title">Локация</div>
+                </div>
+                <div class="tournament-details-value">г.Москва, ул.Кулакова, дом15к.2 («Самбо-70»</div>
+            </div>
+            
+            <div class="tournament-details-item">
+                <div class="tournament-details-content">
+                    <div class="tournament-details-icon"><img src="./img/schedule.svg" alt=""></div>
+                    <div class="tournament-details-title">Дата проведения</div>
+                </div>
+                <div class="tournament-details-value">16.01.2025, 10:00 по МСК</div>
+            </div>
+            
+            <div class="tournament-details-item">
+                <div class="tournament-details-content">
+                    <div class="tournament-details-icon"><img src="./img/Vector_icon.svg" alt=""></div>
+                    <div class="tournament-details-title">Условия участия</div>
+                </div>
+                <div class="tournament-details-value">до 70кг, 16-18 лет, синий пояс</div>
+            </div>
+            
+            <div class="tournament-details-item">
+                <div class="tournament-details-content">
+                    <div class="tournament-details-icon"><img src="./img/Organizer.svg" alt=""></div>
+                    <div class="tournament-details-title">Организатор</div>
+                </div>
+                <div class="tournament-details-value">UFC</div>
+            </div>
+        </div>
+        
+        
+        <div class="tournament-action">
+            <button class="tournament-action-button">Принять участие</button>
+        </div>
+    </div>
+</div>
+
+<div class="info">
+    <div class="faq-section">
+        <h2 class="faq-title">Информация о турнире</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Общие положения</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Место и сроки проведения</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Требования к участникам и условия их допуска</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Условия финансирования</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Организаторы мероприятия</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Обеспечение безопасности участников и зрителей</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Условия подведения итогов</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Награждение победителей и призеров</h3>
+                <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-answer">
+                <p>Оргкомитет: Юраков М.Д, Захаров А.А.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="contact-details-item">
+            <div class="contact-details-title">Организатор</div>
+            <div class="contact-details-content">
+                <div class="contact-details-icon"><img src="./img/phone.svg" alt=""></div>
+                <div class="contact-details-value">+7 000 000 00-00</div>
+            </div>
+            <div class="contact-details-content">
+                <div class="contact-details-icon"><img src="./img/mail.svg" alt=""></div>
+                <div class="contact-details-value">ufc@gmail.com</div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <!-- HTML-код футера -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Левая часть с формой связи -->
+        <div class="footer-contact">
+            <h2 class="footer-title">ОСТАЛИСЬ ВОПРОСЫ? СВЯЖИТЕСЬ С НАМИ</h2>
+            <p class="footer-text">Наши менеджеры ответят на все интересующие вас вопросы, помогут с регистрацией или проведением турнира</p>
+            <button class="footer-button">Связаться</button>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-label">Телефон</div>
+                    <div class="contact-value">+7 (000) 000-00-00</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Эл. почта</div>
+                    <div class="contact-value">arena@pro.ru</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Юр. адрес</div>
+                    <div class="contact-value">Пермь, улица ленина</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Правая часть с меню -->
+        <div class="footer-menu">
+            <!-- Логотип -->
+            <div class="footer-logo">
+                <img src="./img/Logo.svg" alt="PROARENA" class="logo-image">
+            </div>
+            
+            <!-- Колонки меню -->
+            <div class="footer-columns">
+                <!-- Колонка 1 -->
+                <div class="footer-column">
+                    <h3 class="column-title">Единоборства</h3>
+                    <ul class="column-links">
+                        <li><a href="#">Бразильское Джиу-Джитсу</a></li>
+                        <li><a href="#">Грэпплинг</a></li>
+                        <li><a href="#">Вольная борьба</a></li>
+                        <li><a href="#">MMA</a></li>
+                        <li><a href="#">Панкратион</a></li>
+                        <li><a href="#">Бокс</a></li>
+                        <li><a href="#">Самбо</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Колонка 2 -->
+                <div class="footer-column">
+                    <h3 class="column-title">Командные виды спорта</h3>
+                    <ul class="column-links">
+                        <li><a href="#">Футбол</a></li>
+                        <li><a href="#">Баскетбол</a></li>
+                        <li><a href="#">Волейбол</a></li>
+                        <li><a href="#">Хоккей</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Колонка 3 -->
+                <div class="footer-column">
+                    <h3 class="column-title">Платформа</h3>
+                    <ul class="column-links">
+                        <li><a href="#">О платформе</a></li>
+                        <li><a href="#">Преимущества</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Нижняя часть с политиками -->
+            <div class="footer-policies">
+                <div class="policies-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Политика обработки персональных данных</a>
+                </div>
+                <div class="footer-credits">
+                    <a href="#" class="design-credit">Дизайн GRACIE DIGITAL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+<!-- Затемнение фона -->
+<div class="backdrop" id="backdrop"></div>
+
+<!-- Мобильный фильтр с выбором возраста (как на первом изображении) -->
+<div class="mobile-filter age-filter" id="ageFilter">
+    <div class="mobile-filter-indicator"></div>
+    <div class="mobile-filter-header">
+        <div class="mobile-filter-title">Фильтры</div>
+    </div>
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-group">
+            <h3 class="mobile-filter-group-title">Возраст</h3>
+            <div class="segment-control">
+                <div class="segment-option active">Все</div>
+                <div class="segment-option">Для детей</div>
+                <div class="segment-option">Для подростков</div>
+                <div class="segment-option">Для взрослых</div>
+            </div>
+        </div>
+        <button class="mobile-filter-apply">Применить</button>
+    </div>
+</div>
+
+<!-- Мобильный фильтр с аккордеоном (как на втором изображении) -->
+<div class="mobile-filter filter-accordion" id="accordionFilter">
+    <div class="mobile-filter-indicator"></div>
+    <div class="mobile-filter-header">
+        <div class="mobile-filter-title">Фильтры</div>
+    </div>
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-group">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Дисциплина</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <!-- Содержимое аккордеона дисциплины -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="mobile-filter-group">
+            <div class="accordion-item" id="ageAccordionItem">
+                <div class="accordion-header">
+                    <span>Возраст</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <!-- Содержимое аккордеона возраста будет загружено динамически -->
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Уровень подготовки</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <!-- Содержимое аккордеона уровня подготовки -->
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Весовая категория</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <!-- Содержимое аккордеона весовой категории -->
+                </div>
+            </div>
+
+        </div>
+        
+        
+        <div class="filter-datepicker">
+            <div class="date-input-group">
+                <span class="date-label">С</span>
+                <input type="date" class="date-input" value="01.01.2025" id="dateFromMobile">
+            </div>
+            
+            <div class="date-input-group">
+                <span class="date-label">До</span>
+                <input type="date" class="date-input" value="01.01.2026" id="dateToMobile">
+            </div>
+        </div>
+        
+        <button class="mobile-filter-apply">Применить</button>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', function() {
+                    // Проверяем, открыт ли текущий элемент
+                    const isOpen = item.classList.contains('active');
+                    
+                    // Закрываем все элементы
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-toggle').textContent = '+';
+                        }
+                    });
+                    
+                    // Переключаем текущий элемент
+                    if (isOpen) {
+                        item.classList.remove('active');
+                        toggle.textContent = '+';
+                    } else {
+                        item.classList.add('active');
+                        toggle.textContent = '-';
+                    }
+                });
+            });
+            
+            // Открываем второй элемент по умолчанию (как на скриншоте)
+            faqItems[1].classList.add('active');
+            faqItems[1].querySelector('.faq-toggle').textContent = '-';
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Получаем элементы
+            const mobileMenu = document.getElementById('headerMobileMenu');
+            const menuToggle = document.getElementById('headerMenuToggle');
+            const menuClose = document.getElementById('headerMenuClose');
+            
+            // Функция для открытия меню
+            function openMenu() {
+                mobileMenu.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Запрещаем прокрутку страницы
+            }
+            
+            // Функция для закрытия меню
+            function closeMenu() {
+                mobileMenu.style.display = 'none';
+                document.body.style.overflow = ''; // Разрешаем прокрутку страницы
+            }
+            
+            // Нажатие на кнопку открытия меню
+            menuToggle.addEventListener('click', openMenu);
+            
+            // Нажатие на кнопку закрытия меню
+            menuClose.addEventListener('click', closeMenu);
+            
+            // Функция для проверки размера экрана и установки начального состояния
+            function checkScreenSize() {
+                if (window.innerWidth > 768) {
+                    // Для десктопов всегда закрываем мобильное меню
+                    closeMenu();
+                }
+            }
+            
+            // Вызываем при загрузке и изменении размера окна
+            window.addEventListener('resize', checkScreenSize);
+            checkScreenSize();
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Обработка выпадающего списка
+        const disciplineFilter = document.getElementById('disciplineFilter');
+        const disciplineDropdown = document.getElementById('disciplineDropdown');
+
+        disciplineFilter.addEventListener('click', function(e) {
+            e.stopPropagation();
+            disciplineDropdown.classList.toggle('active');
+        });
+
+        // Закрытие выпадающего списка при клике вне его
+        document.addEventListener('click', function(e) {
+            if (!disciplineDropdown.contains(e.target) && e.target !== disciplineFilter) {
+                disciplineDropdown.classList.remove('active');
+            }
+        });
+
+        // Все чекбоксы кроме "Все"
+        const checkboxes = document.querySelectorAll('.schedule-checkbox:not(#all)');
+        const allCheckbox = document.getElementById('all');
+
+        // Когда чекбокс "Все" изменяется
+        allCheckbox.addEventListener('change', function() {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = allCheckbox.checked;
+            });
+        });
+
+        // Когда изменяются другие чекбоксы
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Проверяем, все ли чекбоксы отмечены
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                const noneChecked = Array.from(checkboxes).every(cb => !cb.checked);
+                
+                // Обновляем состояние чекбокса "Все"
+                if (allChecked) {
+                    allCheckbox.checked = true;
+                    allCheckbox.indeterminate = false;
+                } else if (noneChecked) {
+                    allCheckbox.checked = false;
+                    allCheckbox.indeterminate = false;
+                } else {
+                    allCheckbox.indeterminate = true;
+                }
+            });
+        });
+    });
+
+</script>
+
+
+<script>
+   // Новый код для мобильных фильтров
+document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы мобильных фильтров
+    const filterButtons = document.querySelectorAll('.schedule-filter-btn');
+    const backdrop = document.getElementById('backdrop');
+    const ageFilter = document.getElementById('ageFilter');
+    const accordionFilter = document.getElementById('accordionFilter');
+    const ageAccordionItem = document.getElementById('ageAccordionItem');
+    const dateFromInput = document.getElementById('dateFrom');
+    const dateToInput = document.getElementById('dateTo');
+    const dateFromInputMobile = document.getElementById('dateFromMobile');
+    const dateToInputMobile = document.getElementById('dateToMobile');
+    
+    // Открытие мобильного фильтра при клике на кнопку фильтров
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // По умолчанию открываем аккордеон-фильтр (как на втором скриншоте)
+            accordionFilter.classList.add('active');
+            backdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Закрытие при клике на затемнение
+    backdrop.addEventListener('click', function() {
+        ageFilter.classList.remove('active');
+        accordionFilter.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Открытие возрастного фильтра при клике на "Возраст"
+    if (ageAccordionItem) {
+        ageAccordionItem.querySelector('.accordion-header').addEventListener('click', function() {
+            // Закрываем основной фильтр и открываем возрастной
+            accordionFilter.classList.remove('active');
+            ageFilter.classList.add('active');
+        });
+    }
+    
+    // Обработка кнопки "Применить" в возрастном фильтре
+    const ageFilterApply = document.getElementById('ageFilterApply');
+    if (ageFilterApply) {
+        ageFilterApply.addEventListener('click', function() {
+            // Закрываем возрастной фильтр и открываем основной
+            ageFilter.classList.remove('active');
+            accordionFilter.classList.add('active');
+            
+            // Здесь можно добавить логику применения фильтра возраста
+            console.log('Фильтр возраста применен');
+        });
+    }
+    
+    // Обработка кнопки "Применить" в основном фильтре
+    const applyButton = document.querySelector('.mobile-filter-apply');
+    if (applyButton) {
+        applyButton.addEventListener('click', function() {
+            // Закрываем все фильтры
+            ageFilter.classList.remove('active');
+            accordionFilter.classList.remove('active');
+            backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Здесь можно добавить логику применения всех фильтров
+            console.log('Все фильтры применены');
+        });
+    }
+    
+    // Обработка полей ввода даты (подключение календаря)
+    // Здесь можно подключить системный календарь
+    if (dateFromInput && dateToInput) {
+        dateFromInput.addEventListener('focus', function() {
+            // Проверка типа устройства для выбора подходящего календаря
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                // Для мобильных устройств используем тип date
+                this.type = 'date';
+            } else {
+                // Можно подключить JavaScript-календарь
+                // Например, flatpickr или аналогичный
+                console.log('Открываем календарь для даты начала');
+            }
+        });
+        
+        dateToInput.addEventListener('focus', function() {
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                this.type = 'date';
+            } else {
+                console.log('Открываем календарь для даты окончания');
+            }
+        });
+    }
+    if (dateFromInputMobile && dateToInputMobile) {
+        dateFromInputMobile.addEventListener('focus', function() {
+            // Проверка типа устройства для выбора подходящего календаря
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                // Для мобильных устройств используем тип date
+                this.type = 'date';
+            } else {
+                // Можно подключить JavaScript-календарь
+                // Например, flatpickr или аналогичный
+                console.log('Открываем календарь для даты начала');
+            }
+        });
+        
+        dateToInputMobile.addEventListener('focus', function() {
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                this.type = 'date';
+            } else {
+                console.log('Открываем календарь для даты окончания');
+            }
+        });
+    }
+});
+    
+    
+    
+document.addEventListener('DOMContentLoaded', function() {
+            const segmentOptions = document.querySelectorAll('.segment-option');
+            
+            segmentOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    segmentOptions.forEach(opt => {
+                        opt.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                });
+            });
+
+            // Обработка кнопки "Применить"
+            const applyButton = document.querySelector('.mobile-filter-apply');
+            applyButton.addEventListener('click', function() {
+                // Здесь можно добавить логику применения фильтра
+                console.log('Фильтр возраста применен');
+            });
+        });
+
+
+
+        
+    </script>
+
+</section>
+</body>

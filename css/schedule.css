@@ -1,0 +1,44 @@
+.main-title{
+    margin: 0;
+}
+
+
+    .schedule-tournaments-wrapper {
+        overflow-x: visible;
+        padding-bottom: 16px;
+    }
+
+    .schedule-tournaments {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .schedule-tournament {
+        width: 100%;
+    }
+    
+    .schedule-filters>.date-input-group{
+        width: 140px;
+    }
+    .schedule-filters>.date-input-group>.date-input{
+        background: rgba(246, 246, 246, 1);
+    }
+
+
+/* Дополнительные стили для мобильной версии */
+@media (max-width: 768px) {
+    .schedule-tournaments {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-tournament {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+}

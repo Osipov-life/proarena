@@ -1,0 +1,212 @@
+
+.tournament-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 20px 50px;
+}
+
+/* Left side with image */
+.tournament-image-section {
+    width: 50%;
+    position: relative;
+}
+
+.tournament-image {
+    /* width: 662px;
+    height: 662px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.tournament-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.6) 100%);
+}
+
+.tournament-gi-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tournament-date {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tournament-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+.tournament-subtitle {
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    color: #f0d080;
+    margin-bottom: 40px;
+}
+
+.tournament-location {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.tournament-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.tournament-details-section {
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tournament-header {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.25;
+}
+
+.tournament-details-item {
+    display: flex;
+    align-items: flex-start;
+    width: calc(50% - 8px);
+    background: rgba(246, 246, 246, 1);
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
+    padding: 16px;
+}
+
+.tournament-details-icon {
+    margin-right: 8px;
+    min-width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournament-details-content {
+    display: flex;
+}
+
+.tournament-details-title {
+    font-weight: bold;
+    color: #666;
+}
+
+.tournament-details-value {
+    font-size: 16px;
+}
+
+.tournament-action {
+    margin-top: auto;
+}
+
+.tournament-action-button {
+    width: 100%;
+    padding: 27px;
+    background-color: #2979ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tournament-action-button:hover {
+    background-color: #1565c0;
+}
+.tournament-image-section-mobile{
+    display: none;
+}
+.course>.tournament-container>.tournament-details-section>.tournament-action>.tournament-action-button{
+    background-color: rgba(37, 37, 37, 1);
+}
+.main-route{
+    margin-bottom: 0;
+}
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tournament-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            .tournament-image-section-mobile{
+                display: block;
+                margin-bottom: 16px;
+            }
+            .tournament-image{
+                width: 100%;
+                height: 100%;
+            }
+
+            .tournament-image-section{
+                display: none;
+            }
+            .tournament-details-section {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 16px;
+            }
+            .tournament-details-item {
+                width: 100%;
+            }
+
+            .tournament-header {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            .tournament-action{
+                display: none;
+            }
+
+            .tournament-gi-labels {
+                font-size: 20px;
+            }
+
+            .tournament-date {
+                font-size: 18px;
+            }
+
+            .tournament-title {
+                font-size: 24px;
+            }
+
+            .tournament-subtitle {
+                font-size: 16px;
+            }
+
+            .tournament-location {
+                font-size: 16px;
+            }
+        }
