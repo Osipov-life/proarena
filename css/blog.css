@@ -81,6 +81,12 @@
     gap: 10px;
     margin-bottom: 20px;
 }
+.blog-tag-list-mobile {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
 .blog-tag {
     display: inline-block;
@@ -278,5 +284,14 @@
     
     .blog-content-featured .blog-article-title {
         font-size: 18px;
+    }
+    .blog-sidebar-title{
+        display: none;
+    }
+    .blog-tag-list{
+        display: none;
+    }
+    .blog-tag-list-mobile{
+        display: flex;
     }
 }
