@@ -384,7 +384,7 @@
         
         .blog-container {
             margin: 0 auto;
-            padding: 20px 50px;
+            padding: 20px 0px;
         }
 
         .blog-title {
@@ -392,6 +392,7 @@
             font-weight: bold;
             color: #222;
             margin-bottom: 30px;
+            padding: 0px 50px;
         }
 
         /* Десктопная версия по умолчанию (таблица/сетка) */
@@ -410,15 +411,16 @@
             text-decoration: none;
             color: inherit;
             border-bottom: 1px solid #e0e0e0;
-            border-right: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
         }
 
         .blog-post:nth-child(3n) {
-            border-right: none;
+            border-right: 1px solid #e0e0e0;
         }
 
         .blog-post:nth-last-child(-n+3) {
-            border-bottom: none;
+            border-top: none;
         }
 
         .blog-post:hover .blog-post-title {
@@ -474,8 +476,9 @@
             text-decoration: none;
             font-size: 16px;
             transition: background-color 0.2s;
-            max-width: 300px;
+            width: 100%;
             margin-left: auto;
+            border: none;
         }
 
         .blog-see-all:hover {
@@ -638,7 +641,7 @@
         gap: 0;
     }
     .blog-post {
-        padding: 20px 0;
+        padding: 20px;
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
         min-height: 200px;
@@ -654,6 +657,19 @@
     .blog-post:nth-last-child(-n+3) {
         border-bottom: 1px solid #e0e0e0;
     }
+    .blog-posts > .blog-post:last-child {
+        border-bottom: none;
+        min-height: 100px;
+    }
+    .blog-posts > .blog-post:last-child>.blog-post-content {
+        min-height: 100px;
+    }
+    .blog-posts > .blog-post:last-child>.blog-post-content>.blog-post-title {
+        display: none;
+    }
+
+    
+    
     .blog-post-content{
         height: 100%;
         min-height: 200px;

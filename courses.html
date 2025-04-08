@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/courses.css">
+    <script src="js/index.js"></script>
     
    
 </head>
@@ -143,30 +144,167 @@
     </div>
 
     <!-- Десктопные фильтры -->
+    
     <div class="schedule-filters">
         <button class="schedule-filter" id="disciplineFilter">
             Дисциплина (все)
             <svg class="schedule-filter-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <!-- Выпадающий список дисциплин -->
+            <div class="schedule-dropdown" id="disciplineDropdown">
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="all" checked>
+                    <label for="all">Все</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="bjj" checked>
+                    <label for="bjj">Бразильское Джиу-Джитсу</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="grappling" checked>
+                    <label for="grappling">Грэпплинг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="freestyle" checked>
+                    <label for="freestyle">Вольная борьба</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="mma" checked>
+                    <label for="mma">ММА</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="pankration" checked>
+                    <label for="pankration">Панкратион</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="boxing" checked>
+                    <label for="boxing">Бокс</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="sambo" checked>
+                    <label for="sambo">Самбо</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="football" checked>
+                    <label for="football">Футбол</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="volleyball" checked>
+                    <label for="volleyball">Волейбол</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="hockey" checked>
+                    <label for="hockey">Хоккей</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox" id="basketball" checked>
+                    <label for="basketball">Баскетбол</label>
+                </div>
+            </div>
         </button>
-        <button class="schedule-filter">
+        <button class="schedule-filter" id="ageFilter">
             Возраст (все)
             <svg class="schedule-filter-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <!-- Выпадающий список возрастов -->
+            <div class="schedule-dropdown" id="ageDropdown">
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox age-checkbox" id="allAge" checked>
+                    <label for="allAge">Все</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox age-checkbox" id="age1" checked>
+                    <label for="age1">Для детей</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox age-checkbox" id="age2" checked>
+                    <label for="age2">Для подростков</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox age-checkbox" id="age3" checked>
+                    <label for="age3">Для взрослых</label>
+                </div>
+            </div>
         </button>
-        <button class="schedule-filter">
+        <button class="schedule-filter" id="weightFilter">
             Весовая категория (все)
             <svg class="schedule-filter-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <!-- Выпадающий список весовых категорий -->
+            <div class="schedule-dropdown" id="weightDropdown">
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="allWeight" checked>
+                    <label for="allWeight">Все</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight1" checked>
+                    <label for="weight1">До 60 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight2" checked>
+                    <label for="weight2">60-65 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight3" checked>
+                    <label for="weight3">65-70 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight4" checked>
+                    <label for="weight4">70-75 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight5" checked>
+                    <label for="weight5">75-80 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight6" checked>
+                    <label for="weight6">80-85 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight7" checked>
+                    <label for="weight7">85-90 кг</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox weight-checkbox" id="weight8" checked>
+                    <label for="weight8">90+ кг</label>
+                </div>
+            </div>
         </button>
-        <button class="schedule-filter">
+        <button class="schedule-filter" id="dateFilter">
             По дате (все)
             <svg class="schedule-filter-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <!-- Выпадающий список дат -->
+            <div class="schedule-dropdown" id="dateDropdown">
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="allDate" checked>
+                    <label for="allDate">Все</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="date1" checked>
+                    <label for="date1">Ближайшая неделя</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="date2" checked>
+                    <label for="date2">Ближайший месяц</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="date3" checked>
+                    <label for="date3">Следующие 3 месяца</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="date4" checked>
+                    <label for="date4">Следующие 6 месяцев</label>
+                </div>
+                <div class="schedule-dropdown-item">
+                    <input type="checkbox" class="schedule-checkbox date-checkbox" id="date5" checked>
+                    <label for="date5">Прошедшие мероприятия</label>
+                </div>
+            </div>
         </button>
         <div class="date-input-group">
             <span class="date-label">С</span>
@@ -179,61 +317,22 @@
         </div>
 
         <div class="ending-filter-group">
-            <p class="active">Сначала новые</p>
-            <p>Сначала новые</p>
+            <label class="sort-option">
+                <input type="radio" name="sortOrder" value="new" checked>
+                <span class="sort-text">Сначала новые</span>
+            </label>
+            <label class="sort-option">
+                <input type="radio" name="sortOrder" value="old">
+                <span class="sort-text">Сначала старые</span>
+            </label>
         </div>
 
-        <!-- Выпадающий список дисциплин -->
-        <div class="schedule-dropdown" id="disciplineDropdown">
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="all" checked>
-                <label for="all">Все</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="bjj" checked>
-                <label for="bjj">Бразильское Джиу-Джитсу</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="grappling" checked>
-                <label for="grappling">Грэпплинг</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="freestyle" checked>
-                <label for="freestyle">Вольная борьба</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="mma" checked>
-                <label for="mma">ММА</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="pankration" checked>
-                <label for="pankration">Панкратион</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="boxing" checked>
-                <label for="boxing">Бокс</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="sambo" checked>
-                <label for="sambo">Самбо</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="football" checked>
-                <label for="football">Футбол</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="volleyball" checked>
-                <label for="volleyball">Волейбол</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="hockey" checked>
-                <label for="hockey">Хоккей</label>
-            </div>
-            <div class="schedule-dropdown-item">
-                <input type="checkbox" class="schedule-checkbox" id="basketball" checked>
-                <label for="basketball">Баскетбол</label>
-            </div>
-        </div>
+        
+
+        
+
+        
+        
     </div>
 
     <!-- Турниры с возможностью горизонтального скролла -->
@@ -563,11 +662,11 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <div class="contact-label">Телефон</div>
-                    <div class="contact-value">+7 (000) 000-00-00</div>
+                    <a href="#" class="contact-value">+7 (000) 000-00-00</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-label">Эл. почта</div>
-                    <div class="contact-value">arena@pro.ru</div>
+                    <a href="#" class="contact-value">arena@pro.ru</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-label">Юр. адрес</div>
@@ -639,8 +738,9 @@
 <!-- Затемнение фона -->
 <div class="backdrop" id="backdrop"></div>
 
+
 <!-- Мобильный фильтр с выбором возраста (как на первом изображении) -->
-<div class="mobile-filter age-filter" id="ageFilter">
+<div class="mobile-filter age-filter" id="ageFilterMobile">
     <div class="mobile-filter-indicator"></div>
     <div class="mobile-filter-header">
         <div class="mobile-filter-title">Фильтры</div>
@@ -659,7 +759,75 @@
     </div>
 </div>
 
-<!-- Мобильный фильтр с аккордеоном (как на втором изображении) -->
+<!-- Мобильный фильтр дисциплин -->
+<div class="mobile-filter discipline-filter" id="disciplineFilterMobile">
+    <div class="mobile-filter-indicator"></div>
+    <div class="mobile-filter-header">
+        <div class="mobile-filter-title">Фильтры</div>
+    </div>
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-group">
+            <h3 class="mobile-filter-group-title">Дисциплина</h3>
+            <div class="segment-control">
+                <div class="segment-option active">Все</div>
+                <div class="segment-option">Бразильское Джиу-Джитсу</div>
+                <div class="segment-option">Грэпплинг</div>
+                <div class="segment-option">ММА</div>
+                <div class="segment-option">Бокс</div>
+                <div class="segment-option">Самбо</div>
+            </div>
+        </div>
+        <button class="mobile-filter-apply" id="disciplineFilterApply">Применить</button>
+    </div>
+</div>
+
+<!-- Мобильный фильтр уровня подготовки -->
+<div class="mobile-filter level-filter" id="levelFilterMobile">
+    <div class="mobile-filter-indicator"></div>
+    <div class="mobile-filter-header">
+        <div class="mobile-filter-title">Фильтры</div>
+    </div>
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-group">
+            <h3 class="mobile-filter-group-title">Уровень подготовки</h3>
+            <div class="segment-control">
+                <div class="segment-option active">Все</div>
+                <div class="segment-option">Начинающий</div>
+                <div class="segment-option">Средний</div>
+                <div class="segment-option">Продвинутый</div>
+                <div class="segment-option">Профессионал</div>
+            </div>
+        </div>
+        <button class="mobile-filter-apply" id="levelFilterApply">Применить</button>
+    </div>
+</div>
+
+<!-- Мобильный фильтр весовой категории -->
+<div class="mobile-filter weight-filter" id="weightFilterMobile">
+    <div class="mobile-filter-indicator"></div>
+    <div class="mobile-filter-header">
+        <div class="mobile-filter-title">Фильтры</div>
+    </div>
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-group">
+            <h3 class="mobile-filter-group-title">Весовая категория</h3>
+            <div class="segment-control">
+                <div class="segment-option active">Все</div>
+                <div class="segment-option">До 60 кг</div>
+                <div class="segment-option">60-65 кг</div>
+                <div class="segment-option">65-70 кг</div>
+                <div class="segment-option">70-75 кг</div>
+                <div class="segment-option">75-80 кг</div>
+                <div class="segment-option">80-85 кг</div>
+                <div class="segment-option">85-90 кг</div>
+                <div class="segment-option">90+ кг</div>
+            </div>
+        </div>
+        <button class="mobile-filter-apply" id="weightFilterApply">Применить</button>
+    </div>
+</div>
+
+<!-- Мобильный фильтр с аккордеоном  -->
 <div class="mobile-filter filter-accordion" id="accordionFilter">
     <div class="mobile-filter-indicator"></div>
     <div class="mobile-filter-header">
@@ -667,7 +835,7 @@
     </div>
     <div class="mobile-filter-content">
         <div class="mobile-filter-group">
-            <div class="accordion-item">
+            <div class="accordion-item" id="disciplineAccordionItem">
                 <div class="accordion-header">
                     <span>Дисциплина</span>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -692,7 +860,7 @@
                     <!-- Содержимое аккордеона возраста будет загружено динамически -->
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" id="levelAccordionItem">
                 <div class="accordion-header">
                     <span>Уровень подготовки</span>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -703,7 +871,7 @@
                     <!-- Содержимое аккордеона уровня подготовки -->
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" id="weightAccordionItem">
                 <div class="accordion-header">
                     <span>Весовая категория</span>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -733,6 +901,7 @@
         <button class="mobile-filter-apply">Применить</button>
     </div>
 </div>
+
 
 <div class="popup-overlay" id="registrationPopup">
     <div class="popup-container">
@@ -783,326 +952,7 @@
         </div>
     </div>
 </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const toggle = item.querySelector('.faq-toggle');
-                
-                question.addEventListener('click', function() {
-                    // Проверяем, открыт ли текущий элемент
-                    const isOpen = item.classList.contains('active');
-                    
-                    // Закрываем все элементы
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                            otherItem.querySelector('.faq-toggle').textContent = '+';
-                        }
-                    });
-                    
-                    // Переключаем текущий элемент
-                    if (isOpen) {
-                        item.classList.remove('active');
-                        toggle.textContent = '+';
-                    } else {
-                        item.classList.add('active');
-                        toggle.textContent = '-';
-                    }
-                });
-            });
-            
-            // Открываем второй элемент по умолчанию (как на скриншоте)
-            faqItems[1].classList.add('active');
-            faqItems[1].querySelector('.faq-toggle').textContent = '-';
-        });
-    </script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Получаем элементы
-            const mobileMenu = document.getElementById('headerMobileMenu');
-            const menuToggle = document.getElementById('headerMenuToggle');
-            const menuClose = document.getElementById('headerMenuClose');
-            
-            // Функция для открытия меню
-            function openMenu() {
-                mobileMenu.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Запрещаем прокрутку страницы
-            }
-            
-            // Функция для закрытия меню
-            function closeMenu() {
-                mobileMenu.style.display = 'none';
-                document.body.style.overflow = ''; // Разрешаем прокрутку страницы
-            }
-            
-            // Нажатие на кнопку открытия меню
-            menuToggle.addEventListener('click', openMenu);
-            
-            // Нажатие на кнопку закрытия меню
-            menuClose.addEventListener('click', closeMenu);
-            
-            // Функция для проверки размера экрана и установки начального состояния
-            function checkScreenSize() {
-                if (window.innerWidth > 768) {
-                    // Для десктопов всегда закрываем мобильное меню
-                    closeMenu();
-                }
-            }
-            
-            // Вызываем при загрузке и изменении размера окна
-            window.addEventListener('resize', checkScreenSize);
-            checkScreenSize();
-        });
-    </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Обработка выпадающего списка
-        const disciplineFilter = document.getElementById('disciplineFilter');
-        const disciplineDropdown = document.getElementById('disciplineDropdown');
-
-        disciplineFilter.addEventListener('click', function(e) {
-            e.stopPropagation();
-            disciplineDropdown.classList.toggle('active');
-        });
-
-        // Закрытие выпадающего списка при клике вне его
-        document.addEventListener('click', function(e) {
-            if (!disciplineDropdown.contains(e.target) && e.target !== disciplineFilter) {
-                disciplineDropdown.classList.remove('active');
-            }
-        });
-
-        // Все чекбоксы кроме "Все"
-        const checkboxes = document.querySelectorAll('.schedule-checkbox:not(#all)');
-        const allCheckbox = document.getElementById('all');
-
-        // Когда чекбокс "Все" изменяется
-        allCheckbox.addEventListener('change', function() {
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = allCheckbox.checked;
-            });
-        });
-
-        // Когда изменяются другие чекбоксы
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                // Проверяем, все ли чекбоксы отмечены
-                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-                const noneChecked = Array.from(checkboxes).every(cb => !cb.checked);
-                
-                // Обновляем состояние чекбокса "Все"
-                if (allChecked) {
-                    allCheckbox.checked = true;
-                    allCheckbox.indeterminate = false;
-                } else if (noneChecked) {
-                    allCheckbox.checked = false;
-                    allCheckbox.indeterminate = false;
-                } else {
-                    allCheckbox.indeterminate = true;
-                }
-            });
-        });
-    });
-
-</script>
 
 
-<script>
-   // Новый код для мобильных фильтров
-document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы мобильных фильтров
-    const filterButtons = document.querySelectorAll('.schedule-filter-btn');
-    const backdrop = document.getElementById('backdrop');
-    const ageFilter = document.getElementById('ageFilter');
-    const accordionFilter = document.getElementById('accordionFilter');
-    const ageAccordionItem = document.getElementById('ageAccordionItem');
-    const dateFromInput = document.getElementById('dateFrom');
-    const dateToInput = document.getElementById('dateTo');
-    const dateFromInputMobile = document.getElementById('dateFromMobile');
-    const dateToInputMobile = document.getElementById('dateToMobile');
-    
-    // Открытие мобильного фильтра при клике на кнопку фильтров
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // По умолчанию открываем аккордеон-фильтр (как на втором скриншоте)
-            accordionFilter.classList.add('active');
-            backdrop.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    // Закрытие при клике на затемнение
-    backdrop.addEventListener('click', function() {
-        ageFilter.classList.remove('active');
-        accordionFilter.classList.remove('active');
-        backdrop.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-    
-    // Открытие возрастного фильтра при клике на "Возраст"
-    if (ageAccordionItem) {
-        ageAccordionItem.querySelector('.accordion-header').addEventListener('click', function() {
-            // Закрываем основной фильтр и открываем возрастной
-            accordionFilter.classList.remove('active');
-            ageFilter.classList.add('active');
-        });
-    }
-    
-    // Обработка кнопки "Применить" в возрастном фильтре
-    const ageFilterApply = document.getElementById('ageFilterApply');
-    if (ageFilterApply) {
-        ageFilterApply.addEventListener('click', function() {
-            // Закрываем возрастной фильтр и открываем основной
-            ageFilter.classList.remove('active');
-            accordionFilter.classList.add('active');
-            
-            // Здесь можно добавить логику применения фильтра возраста
-            console.log('Фильтр возраста применен');
-        });
-    }
-    
-    // Обработка кнопки "Применить" в основном фильтре
-    const applyButton = document.querySelector('.mobile-filter-apply');
-    if (applyButton) {
-        applyButton.addEventListener('click', function() {
-            // Закрываем все фильтры
-            ageFilter.classList.remove('active');
-            accordionFilter.classList.remove('active');
-            backdrop.classList.remove('active');
-            document.body.style.overflow = '';
-            
-            // Здесь можно добавить логику применения всех фильтров
-            console.log('Все фильтры применены');
-        });
-    }
-    
-    // Обработка полей ввода даты (подключение календаря)
-    // Здесь можно подключить системный календарь
-    if (dateFromInput && dateToInput) {
-        dateFromInput.addEventListener('focus', function() {
-            // Проверка типа устройства для выбора подходящего календаря
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                // Для мобильных устройств используем тип date
-                this.type = 'date';
-            } else {
-                // Можно подключить JavaScript-календарь
-                // Например, flatpickr или аналогичный
-                console.log('Открываем календарь для даты начала');
-            }
-        });
-        
-        dateToInput.addEventListener('focus', function() {
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                this.type = 'date';
-            } else {
-                console.log('Открываем календарь для даты окончания');
-            }
-        });
-    }
-    if (dateFromInputMobile && dateToInputMobile) {
-        dateFromInputMobile.addEventListener('focus', function() {
-            // Проверка типа устройства для выбора подходящего календаря
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                // Для мобильных устройств используем тип date
-                this.type = 'date';
-            } else {
-                // Можно подключить JavaScript-календарь
-                // Например, flatpickr или аналогичный
-                console.log('Открываем календарь для даты начала');
-            }
-        });
-        
-        dateToInputMobile.addEventListener('focus', function() {
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                this.type = 'date';
-            } else {
-                console.log('Открываем календарь для даты окончания');
-            }
-        });
-    }
-});
-    
-    
-    
-document.addEventListener('DOMContentLoaded', function() {
-            const segmentOptions = document.querySelectorAll('.segment-option');
-            
-            segmentOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // Remove active class from all options
-                    segmentOptions.forEach(opt => {
-                        opt.classList.remove('active');
-                    });
-                    
-                    // Add active class to clicked option
-                    this.classList.add('active');
-                });
-            });
-
-            // Обработка кнопки "Применить"
-            const applyButton = document.querySelector('.mobile-filter-apply');
-            applyButton.addEventListener('click', function() {
-                // Здесь можно добавить логику применения фильтра
-                console.log('Фильтр возраста применен');
-            });
-        });
-
-
-
-        
-    </script>
-
-<script>
-    // Получаем элементы
-    const openPopupBtn = document.querySelector('.courses-enroll-btn');
-    const popup = document.getElementById('registrationPopup');
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    const submitBtn = document.querySelector('.popup-submit-btn');
-    
-    // Функция открытия попапа
-    function openPopup() {
-        popup.style.display = 'flex';
-        // Анимация появления
-        setTimeout(() => {
-            popup.style.opacity = '1';
-        }, 10);
-        // Блокируем прокрутку страницы
-        document.body.style.overflow = 'hidden';
-    }
-    
-    // Функция закрытия попапа
-    function closePopup() {
-        popup.style.opacity = '0';
-        setTimeout(() => {
-            popup.style.display = 'none';
-        }, 200);
-        // Разблокируем прокрутку страницы
-        document.body.style.overflow = '';
-    }
-    
-    // Назначаем обработчики событий
-    openPopupBtn.addEventListener('click', openPopup);
-    closePopupBtn.addEventListener('click', closePopup);
-    
-    // Закрытие по клику на подложку (вне попапа)
-    popup.addEventListener('click', function(event) {
-        if (event.target === popup) {
-            closePopup();
-        }
-    });
-    
-    // Отправка формы
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Здесь можно добавить валидацию формы и отправку данных
-        alert('Заявка отправлена');
-        closePopup();
-    });
-</script>
 </section>
 </body>

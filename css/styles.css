@@ -217,6 +217,8 @@ body {
         font-weight: 500;
         font-size: 32px;
         line-height: 125%;
+        text-decoration: none;
+        color: white;
     }
     
     /* Правая часть с меню */
@@ -617,7 +619,9 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 700;
 }
-
+.arrow>.faq-item>.faq-question>.faq-toggle{
+    border: none;
+}
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -733,6 +737,7 @@ body {
             display: flex;
             align-items: center;
             font-size: 14px;
+            position: relative;
         }
 
         .schedule-filter-arrow {
@@ -747,13 +752,25 @@ body {
             right: 50px;
             top: 11px;
         }
-        .ending-filter-group>p.active{
-            color: Black;
-        }
-        .ending-filter-group>p{
+        
+        .sort-option {
             font-size: 14px;
-            color: Grey ;
+            color: Grey;
             cursor: pointer;
+        }
+
+        .sort-option input[type="radio"] {
+            display: none;
+        }
+
+        .sort-text {
+            font-size: 14px;
+            color: Grey;
+            cursor: pointer;
+        }
+
+        .sort-option input[type="radio"]:checked + .sort-text {
+            color: Black;
         }
 
         /* Выпадающий список */
@@ -767,6 +784,8 @@ body {
             overflow: hidden;
             transition: max-height 0.3s ease;
             z-index: 10;
+            text-align: left;
+            left: 0; 
         }
 
         .schedule-dropdown.active {
@@ -1133,7 +1152,7 @@ body {
         font-size: 16px;
     }
     
-    .age-filter {
+    .age-filter ,.discipline-filter ,.level-filter ,.weight-filter{
         background-color: white;
         border-radius: 12px;
         margin: 0 auto;
