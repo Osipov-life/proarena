@@ -614,10 +614,15 @@
     .statistic-item {
         flex-direction: column-reverse;
     }
+    .statistic-item:last-child {
+        flex-direction: column;
+    }
 
     .statistic-sub-item{
         flex-direction: column-reverse;
+        border-bottom: 1px solid rgba(235, 235, 235, 1);
         width: 100%;
+        padding: 0 0 16px;
     }
     .statistic-numbers {
         display: flex;
@@ -627,8 +632,7 @@
         border-left: none;
         padding: 0;
         border: none;
-        border-bottom: 1px solid rgba(235, 235, 235, 1);
-        padding: 0 0 16px 0;
+        padding: 16px 0 0px 0;
     }
 
     .blog-title{

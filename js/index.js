@@ -1,39 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const toggle = item.querySelector('.faq-toggle');
         const isArrow = item.closest('.arrow'); // проверяем, есть ли класс arrow выше
-    
+
         if (question) {
             question.addEventListener('click', function () {
                 const isOpen = item.classList.contains('active');
-    
+
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                         const otherToggle = otherItem.querySelector('.faq-toggle');
                         if (otherToggle) {
-                            if (isArrow) {
-                                otherToggle.textContent = '🡣';
-                            } else {
-                                otherToggle.textContent = '+';
-                            }
+                            otherToggle.classList.remove('open');
                         }
                     }
                 });
-    
+
                 if (isOpen) {
                     item.classList.remove('active');
-                    toggle.textContent = isArrow ? '🡣' : '+';
+                    toggle.classList.remove('open');
                 } else {
                     item.classList.add('active');
-                    toggle.textContent = isArrow ? '🡡' : '-';
+                    toggle.classList.add('open');
                 }
             });
         }
     });
-    
             
     
             // Получаем элементы
