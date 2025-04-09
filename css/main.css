@@ -552,7 +552,9 @@
         position: absolute;
     }
 
-
+    .statistic-label{
+        margin-bottom: 8px;
+    }
     .courses-header .courses-actions {
         display: none;
     }
